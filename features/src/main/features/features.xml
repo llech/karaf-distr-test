@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="example-features">
+
+	<feature name="apache-commons" version="${project.version}">
+        <bundle start-level="30">mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle start-level="30">mvn:commons-io/commons-io/2.4</bundle>
+        <bundle start-level="30">mvn:commons-codec/commons-codec/1.11</bundle>
+		<bundle start-level="30">mvn:commons-beanutils/commons-beanutils/1.9.3</bundle>
+        <bundle start-level="30">mvn:org.apache.commons/commons-csv/1.5</bundle>
+        <bundle start-level="30">mvn:commons-collections/commons-collections/3.2.2</bundle>
+		<bundle start-level="30">mvn:commons-digester/commons-digester/1.8.1</bundle>
+		<bundle start-level="30">mvn:commons-digester/commons-digester/2.1</bundle>
+		<bundle start-level="30">mvn:org.apache.commons/commons-lang3/3.7</bundle>
+	</feature>
+	
+	<feature name="httpcomponents" version="${project.version}">
+		<bundle start-level="30">mvn:org.apache.httpcomponents/httpcore-osgi/4.4.10</bundle>
+		<bundle start-level="30">mvn:org.apache.httpcomponents/httpclient-osgi/4.5.5</bundle>
+	</feature>
+	
+	<feature name="bouncycastle" version="${project.version}">
+        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk15on/1.56</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk15on/1.56</bundle>
+	</feature>
+
+    <feature name="example-core" description="Taxcloud core web feature" version="${project.version}">
+		<feature>http</feature>
+		<feature version="${aries.jpa.version}">jpa</feature>
+		<feature version="1.2.0">transaction-api</feature>
+		<feature>aries-blueprint</feature>
+		<feature>transaction</feature>
+		<feature>eclipselink</feature>
+		<feature>pax-jdbc-config</feature>
+		<feature>pax-jdbc-postgresql</feature>
+		<feature>pax-jdbc-pool-dbcp2</feature>
+		<feature>spring-jdbc</feature>
+		<feature>apache-commons</feature>
+		<feature>httpcomponents</feature>
+		<feature>bouncycastle</feature>
+		
+        <bundle start-level="30">mvn:org.apache.aries.transaction/org.apache.aries.transaction.blueprint/2.1.0</bundle>
+        <bundle start-level="30">mvn:com.google.code.gson/gson/2.7</bundle>
+        <bundle start-level="30">mvn:net.minidev/accessors-smart/1.1</bundle>
+        <bundle start-level="30">mvn:net.minidev/json-smart/1.3.1</bundle>
+        <bundle start-level="30">mvn:com.io7m.jcip/jcip-annotations/1.0.2</bundle>
+        <bundle start-level="30">mvn:com.nimbusds/nimbus-jose-jwt/4.34.1</bundle>
+        <bundle start-level="30">mvn:org.freemarker/freemarker/2.3.23</bundle>
+        <bundle start-level="30">wrap:mvn:net.htmlparser.jericho/jericho-html/3.4</bundle>
+        <bundle start-level="30">mvn:org.apache.tika/tika-core/1.16</bundle>
+        
+        <bundle start-level="30">mvn:org.apache.httpcomponents/httpcore-osgi/4.4.6</bundle>
+   		<bundle start-level="30">mvn:org.apache.httpcomponents/httpclient-osgi/4.5.3</bundle>
+        
+        <bundle start-level="30">mvn:com.riag.osgi/saxon-he/9.7.0.10</bundle>
+	</feature>
+	
+</features>
