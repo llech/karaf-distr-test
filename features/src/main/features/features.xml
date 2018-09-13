@@ -51,7 +51,7 @@
         <bundle start-level="30">mvn:org.apache.httpcomponents/httpcore-osgi/4.4.6</bundle>
    		<bundle start-level="30">mvn:org.apache.httpcomponents/httpclient-osgi/4.5.3</bundle>
         
-        <bundle start-level="30">mvn:com.riag.osgi/saxon-he/9.7.0.10</bundle>
+<!--        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.saxon/9.7.0-10_1</bundle> -->
 	</feature>
 	
 </features>
